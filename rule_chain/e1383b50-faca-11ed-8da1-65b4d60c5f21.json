@@ -1,0 +1,478 @@
+{
+  "entityType" : "RULE_CHAIN",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : ""
+    },
+    "configuration" : null,
+    "debugMode" : false,
+    "externalId" : null,
+    "firstRuleNodeId" : {
+      "entityType" : "RULE_NODE",
+      "id" : "e13f4030-faca-11ed-8da1-65b4d60c5f21"
+    },
+    "id" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "e1383b50-faca-11ed-8da1-65b4d60c5f21"
+    },
+    "name" : "Fido Rule",
+    "root" : true,
+    "type" : "CORE"
+  },
+  "metaData" : {
+    "connections" : [ {
+      "fromIndex" : 0,
+      "toIndex" : 3,
+      "type" : "Post attributes"
+    }, {
+      "fromIndex" : 0,
+      "toIndex" : 4,
+      "type" : "RPC Request from Device"
+    }, {
+      "fromIndex" : 0,
+      "toIndex" : 13,
+      "type" : "Post telemetry"
+    }, {
+      "fromIndex" : 0,
+      "toIndex" : 16,
+      "type" : "Post telemetry"
+    }, {
+      "fromIndex" : 1,
+      "toIndex" : 0,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 4,
+      "toIndex" : 5,
+      "type" : "True"
+    }, {
+      "fromIndex" : 5,
+      "toIndex" : 6,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 6,
+      "toIndex" : 7,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 8,
+      "toIndex" : 2,
+      "type" : "True"
+    }, {
+      "fromIndex" : 9,
+      "toIndex" : 12,
+      "type" : "True"
+    }, {
+      "fromIndex" : 10,
+      "toIndex" : 11,
+      "type" : "True"
+    }, {
+      "fromIndex" : 13,
+      "toIndex" : 15,
+      "type" : "Success"
+    }, {
+      "fromIndex" : 15,
+      "toIndex" : 14,
+      "type" : "Success"
+    } ],
+    "firstNodeIndex" : 1,
+    "nodes" : [ {
+      "additionalInfo" : {
+        "description" : null,
+        "layoutX" : 288,
+        "layoutY" : 246
+      },
+      "configuration" : {
+        "version" : 0
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "e13c5a00-faca-11ed-8da1-65b4d60c5f21"
+      },
+      "name" : "Message Type Switch",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbMsgTypeSwitchNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 27,
+        "layoutY" : 319
+      },
+      "configuration" : {
+        "persistAlarmRulesState" : false,
+        "fetchAlarmRulesStateOnStart" : false
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "e13f4030-faca-11ed-8da1-65b4d60c5f21"
+      },
+      "name" : "Device Profile Node",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.profile.TbDeviceProfileNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1160,
+        "layoutY" : 467
+      },
+      "configuration" : {
+        "projectId" : "guarddog-dev",
+        "topicName" : "gds-iot",
+        "serviceAccountKey" : "{\r\n  \"type\": \"service_account\",\r\n  \"project_id\": \"guarddog-dev\",\r\n  \"private_key_id\": \"d1f09755a4a5a46e796c799646145fcaee6c2f8b\",\r\n  \"private_key\": \"-----BEGIN PRIVATE KEY-----\\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDd8AqT0yPPvc7W\\nBULbPM4n4GUGKG7/38DZ7FT7UWRuOUTm4GbtJwmSuJBO1FHvaPtceaTHpng6h8OE\\nxbfKMQkEDbD3lvSFdgpSEmLfTKUpPZy+fU6ZsnsA6E5UChOwuaHOzktbA30GEb7x\\nf/EUNs1+v4bqAQPv2rWiE3bKpVBj0Au9mnn+cS2M/m9nOAthfp/i3sEUk29lQ/Nv\\nlHC5++c2ZjGWexguSOHCxmrezYVjgFwdYfE8+XIxIjxxvynEwxMhede/zD+oe1yg\\nFW9GhAoL82pczq6hfRJMIkPdYTg0jZZ6JA7pshG3rtHOZxbSTSI+ErnHEz48C/m4\\neQep2LotAgMBAAECggEAClvw8nNxgXnXlK/MLhWJfd0Aeiga/kCAbOuWD+D9shNk\\nPu6Mf1dKIBoTSkqoxGb/DJL0+QixJfI+Uw0zhfGB/TlyYCwgn7YhxzDqgoe+Uc15\\nan7I0228Rg+R0GRkBOS1Q8TnSYlBJa5gXj9djlb8goUIFBYWC/UGc1k7Ozw6I151\\nXC7U8SdXLi16sXdk1NJk28QpgxRmiYtUyCsnRpy7Zfayps9sbsh9yc2J3a41Verf\\nYEyYOBCE/Qc7Xe4LzWvDKn50AeB+v08UgDFvLrYAeLFBdgqJmZ+PQG5ARW6C8XLL\\n9Os+5zR4cetKW7ahdZI+HDFLhLi/dCo1JVxn/aFhYQKBgQDzSQB6+mVw5ldNp4G+\\nST2IJlEZOS0/Ff2Jnqb0MwurBZay3iZkyxs4OdGcD7BfKweQmay7FrPSKanL3kzU\\nfBXzlF5iHjHKT3l0hSUGtd5TqVJ+l5lVibzih1Ttx3HL3/4mV7gp1rOG5lEoRDrr\\nUAtZe18W/wQef+uby4DuZKYpyQKBgQDpiWx1r5Tfa+7HdGLW/mBAT8IFUNHtMmn0\\nBqkTmkUCeMYSDRmY11fK/EASE1AdFo+d+V/5a8EktjEFcUR+q4wvWMAyvMJ+EU09\\nx0HOENdS6AydKbeYg7G4GLLVEO6je9TdXtOuo74MasmDIHnms2gOWiRjGArB7bKg\\naN00og8/RQKBgCzzZxhR3Z5foO/jLFDJXYojckaTzu1iFcdwve5O5DAER1TjQPrM\\noEniPP111KOw4qPwEP88cZs6QXo+p7l29+NanZnJdG+qAYnq8+1qexrAJVLoldc9\\nLN46HRIWEMuXpnDVMlzgo6kgMwyalrxVvNMavXYVRmCQSCswDbF+fUkpAoGBAIbK\\nXKFoYCK8JytTz6CLXX6BClkLFr8y89h256t6xQ3yK1BL41RGJlPwWAKWxwyi8u2Y\\n+334ZZgM2Cpt/7ykwtqo/PXL4O3mipB3q1GGguFFMdKcO215xV+eUcmMZlBRrsC+\\ndKs9svlzwS8/1VwEfLCb8piHTd40lX7kR5iTWP2JAoGAdQYscMjQLGXkJgoPlym2\\noZd1cd8kBGGMxlaL3z0kOhTXJMnss/y2RN4MjUCXJH234TP9eaQsGpmxD25P0TzG\\n6i2v3eKdf3PDsOhmIh6UsX7uv/Sq1c8CnTRlTfSaV79YQWaW261PTdPSIHeSyeEL\\nhEpc1Iv9pPTLRnGQ4GkGfvU=\\n-----END PRIVATE KEY-----\\n\",\r\n  \"client_email\": \"guarddog-dev@guarddog-dev.iam.gserviceaccount.com\",\r\n  \"client_id\": \"105788050758665634843\",\r\n  \"auth_uri\": \"https://accounts.google.com/o/oauth2/auth\",\r\n  \"token_uri\": \"https://oauth2.googleapis.com/token\",\r\n  \"auth_provider_x509_cert_url\": \"https://www.googleapis.com/oauth2/v1/certs\",\r\n  \"client_x509_cert_url\": \"https://www.googleapis.com/robot/v1/metadata/x509/guarddog-dev%40guarddog-dev.iam.gserviceaccount.com\"\r\n}\r\n",
+        "serviceAccountKeyFileName" : "dev.json",
+        "messageAttributes" : {
+          "deviceId" : "${deviceId}",
+          "subFolder" : "${subFolder}"
+        }
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "440d2f70-fe35-11ed-9267-2773717c19a5"
+      },
+      "name" : "process-iot",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.gcp.pubsub.TbPubSubNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 729,
+        "layoutY" : 298
+      },
+      "configuration" : {
+        "scope" : "CLIENT_SCOPE",
+        "notifyDevice" : false,
+        "sendAttributesUpdatedNotification" : false
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "fcbdbf90-fe61-11ed-9267-2773717c19a5"
+      },
+      "name" : "attr",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 545,
+        "layoutY" : 108
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return msg.temperature > 20;",
+        "tbelScript" : "return msg.method == \"get_device_configs\""
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "964ea910-fefa-11ed-9267-2773717c19a5"
+      },
+      "name" : "check method",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 832,
+        "layoutY" : 30
+      },
+      "configuration" : {
+        "tellFailureIfAbsent" : true,
+        "fetchToData" : false,
+        "clientAttributeNames" : [ "device_configs" ],
+        "sharedAttributeNames" : [ ],
+        "serverAttributeNames" : [ ],
+        "latestTsKeyNames" : [ ],
+        "getLatestValueWithTs" : false
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "964fba80-fefa-11ed-9267-2773717c19a5"
+      },
+      "name" : "Get attribgute message",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1138,
+        "layoutY" : 67
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "msg.params = metadata.cs_device_configs;\nreturn {msg:msg}"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "2052d820-fefb-11ed-9267-2773717c19a5"
+      },
+      "name" : "Create rpc response",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1199,
+        "layoutY" : 188
+      },
+      "configuration" : {
+        "serviceIdMetaDataAttribute" : "serviceId",
+        "sessionIdMetaDataAttribute" : "sessionId",
+        "requestIdMetaDataAttribute" : "requestId"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "205485d0-fefb-11ed-9267-2773717c19a5"
+      },
+      "name" : "rpc call reply",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.rpc.TbSendRPCReplyNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 770,
+        "layoutY" : 432
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return msg.temperature > 20;",
+        "tbelScript" : "//const services = [\"status\", \"arp\", \"discovery\", \"aircrack\"];\n\n\nreturn metadata.subFolder == \"status\" ||  \n       metadata.subFolder == \"arp\" || \n       metadata.subFolder == \"aircrack\" || \n       metadata.subFolder == \"discovery\""
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f5b09680-fff3-11ed-9267-2773717c19a5"
+      },
+      "name" : "Basic-Services-filter",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 790,
+        "layoutY" : 543
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return msg.temperature > 20;",
+        "tbelScript" : "\nreturn metadata.subFolder == \"wifi_info\" ||  \n        metadata.subFolder == \"nmap_detailed\" || \n        metadata.subFolder == \"external_ips\" || \n        metadata.subFolder == \"vulnerabilities\" || \n        metadata.subFolder == \"spoof_mail\" || \n        metadata.subFolder == \"external_vuln_2\" ||\n        metadata.subFolder == \"external_vulnerabilities\" ||\n        metadata.subFolder == \"sniffer_lan\" ||\n        metadata.subFolder == \"sniffer_wifi\" "
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "f5b180e0-fff3-11ed-9267-2773717c19a5"
+      },
+      "name" : "advance-Services-filter",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 784,
+        "layoutY" : 661
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return msg.temperature > 20;",
+        "tbelScript" : "\nreturn metadata.subFolder == \"arp_spoofing\" ||  \n        metadata.subFolder == \"evil_twin\" || \n        metadata.subFolder == \"attack_deauth\""
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "1d3f3c60-fff4-11ed-9267-2773717c19a5"
+      },
+      "name" : "attacks-Services-filter",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1165,
+        "layoutY" : 674
+      },
+      "configuration" : {
+        "projectId" : "guarddog-dev",
+        "topicName" : "gds-iot",
+        "serviceAccountKey" : "{\r\n  \"type\": \"service_account\",\r\n  \"project_id\": \"guarddog-dev\",\r\n  \"private_key_id\": \"d1f09755a4a5a46e796c799646145fcaee6c2f8b\",\r\n  \"private_key\": \"-----BEGIN PRIVATE KEY-----\\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDd8AqT0yPPvc7W\\nBULbPM4n4GUGKG7/38DZ7FT7UWRuOUTm4GbtJwmSuJBO1FHvaPtceaTHpng6h8OE\\nxbfKMQkEDbD3lvSFdgpSEmLfTKUpPZy+fU6ZsnsA6E5UChOwuaHOzktbA30GEb7x\\nf/EUNs1+v4bqAQPv2rWiE3bKpVBj0Au9mnn+cS2M/m9nOAthfp/i3sEUk29lQ/Nv\\nlHC5++c2ZjGWexguSOHCxmrezYVjgFwdYfE8+XIxIjxxvynEwxMhede/zD+oe1yg\\nFW9GhAoL82pczq6hfRJMIkPdYTg0jZZ6JA7pshG3rtHOZxbSTSI+ErnHEz48C/m4\\neQep2LotAgMBAAECggEAClvw8nNxgXnXlK/MLhWJfd0Aeiga/kCAbOuWD+D9shNk\\nPu6Mf1dKIBoTSkqoxGb/DJL0+QixJfI+Uw0zhfGB/TlyYCwgn7YhxzDqgoe+Uc15\\nan7I0228Rg+R0GRkBOS1Q8TnSYlBJa5gXj9djlb8goUIFBYWC/UGc1k7Ozw6I151\\nXC7U8SdXLi16sXdk1NJk28QpgxRmiYtUyCsnRpy7Zfayps9sbsh9yc2J3a41Verf\\nYEyYOBCE/Qc7Xe4LzWvDKn50AeB+v08UgDFvLrYAeLFBdgqJmZ+PQG5ARW6C8XLL\\n9Os+5zR4cetKW7ahdZI+HDFLhLi/dCo1JVxn/aFhYQKBgQDzSQB6+mVw5ldNp4G+\\nST2IJlEZOS0/Ff2Jnqb0MwurBZay3iZkyxs4OdGcD7BfKweQmay7FrPSKanL3kzU\\nfBXzlF5iHjHKT3l0hSUGtd5TqVJ+l5lVibzih1Ttx3HL3/4mV7gp1rOG5lEoRDrr\\nUAtZe18W/wQef+uby4DuZKYpyQKBgQDpiWx1r5Tfa+7HdGLW/mBAT8IFUNHtMmn0\\nBqkTmkUCeMYSDRmY11fK/EASE1AdFo+d+V/5a8EktjEFcUR+q4wvWMAyvMJ+EU09\\nx0HOENdS6AydKbeYg7G4GLLVEO6je9TdXtOuo74MasmDIHnms2gOWiRjGArB7bKg\\naN00og8/RQKBgCzzZxhR3Z5foO/jLFDJXYojckaTzu1iFcdwve5O5DAER1TjQPrM\\noEniPP111KOw4qPwEP88cZs6QXo+p7l29+NanZnJdG+qAYnq8+1qexrAJVLoldc9\\nLN46HRIWEMuXpnDVMlzgo6kgMwyalrxVvNMavXYVRmCQSCswDbF+fUkpAoGBAIbK\\nXKFoYCK8JytTz6CLXX6BClkLFr8y89h256t6xQ3yK1BL41RGJlPwWAKWxwyi8u2Y\\n+334ZZgM2Cpt/7ykwtqo/PXL4O3mipB3q1GGguFFMdKcO215xV+eUcmMZlBRrsC+\\ndKs9svlzwS8/1VwEfLCb8piHTd40lX7kR5iTWP2JAoGAdQYscMjQLGXkJgoPlym2\\noZd1cd8kBGGMxlaL3z0kOhTXJMnss/y2RN4MjUCXJH234TP9eaQsGpmxD25P0TzG\\n6i2v3eKdf3PDsOhmIh6UsX7uv/Sq1c8CnTRlTfSaV79YQWaW261PTdPSIHeSyeEL\\nhEpc1Iv9pPTLRnGQ4GkGfvU=\\n-----END PRIVATE KEY-----\\n\",\r\n  \"client_email\": \"guarddog-dev@guarddog-dev.iam.gserviceaccount.com\",\r\n  \"client_id\": \"105788050758665634843\",\r\n  \"auth_uri\": \"https://accounts.google.com/o/oauth2/auth\",\r\n  \"token_uri\": \"https://oauth2.googleapis.com/token\",\r\n  \"auth_provider_x509_cert_url\": \"https://www.googleapis.com/oauth2/v1/certs\",\r\n  \"client_x509_cert_url\": \"https://www.googleapis.com/robot/v1/metadata/x509/guarddog-dev%40guarddog-dev.iam.gserviceaccount.com\"\r\n}\r\n",
+        "serviceAccountKeyFileName" : "dev.json",
+        "messageAttributes" : {
+          "deviceId" : "${deviceId}",
+          "subFolder" : "${subFolder}"
+        }
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "b7fb3eb0-0158-11ee-9267-2773717c19a5"
+      },
+      "name" : "attacks",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.gcp.pubsub.TbPubSubNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 1177,
+        "layoutY" : 563
+      },
+      "configuration" : {
+        "projectId" : "advance",
+        "topicName" : "gds-iot",
+        "serviceAccountKey" : "{\r\n  \"type\": \"service_account\",\r\n  \"project_id\": \"guarddog-dev\",\r\n  \"private_key_id\": \"d1f09755a4a5a46e796c799646145fcaee6c2f8b\",\r\n  \"private_key\": \"-----BEGIN PRIVATE KEY-----\\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDd8AqT0yPPvc7W\\nBULbPM4n4GUGKG7/38DZ7FT7UWRuOUTm4GbtJwmSuJBO1FHvaPtceaTHpng6h8OE\\nxbfKMQkEDbD3lvSFdgpSEmLfTKUpPZy+fU6ZsnsA6E5UChOwuaHOzktbA30GEb7x\\nf/EUNs1+v4bqAQPv2rWiE3bKpVBj0Au9mnn+cS2M/m9nOAthfp/i3sEUk29lQ/Nv\\nlHC5++c2ZjGWexguSOHCxmrezYVjgFwdYfE8+XIxIjxxvynEwxMhede/zD+oe1yg\\nFW9GhAoL82pczq6hfRJMIkPdYTg0jZZ6JA7pshG3rtHOZxbSTSI+ErnHEz48C/m4\\neQep2LotAgMBAAECggEAClvw8nNxgXnXlK/MLhWJfd0Aeiga/kCAbOuWD+D9shNk\\nPu6Mf1dKIBoTSkqoxGb/DJL0+QixJfI+Uw0zhfGB/TlyYCwgn7YhxzDqgoe+Uc15\\nan7I0228Rg+R0GRkBOS1Q8TnSYlBJa5gXj9djlb8goUIFBYWC/UGc1k7Ozw6I151\\nXC7U8SdXLi16sXdk1NJk28QpgxRmiYtUyCsnRpy7Zfayps9sbsh9yc2J3a41Verf\\nYEyYOBCE/Qc7Xe4LzWvDKn50AeB+v08UgDFvLrYAeLFBdgqJmZ+PQG5ARW6C8XLL\\n9Os+5zR4cetKW7ahdZI+HDFLhLi/dCo1JVxn/aFhYQKBgQDzSQB6+mVw5ldNp4G+\\nST2IJlEZOS0/Ff2Jnqb0MwurBZay3iZkyxs4OdGcD7BfKweQmay7FrPSKanL3kzU\\nfBXzlF5iHjHKT3l0hSUGtd5TqVJ+l5lVibzih1Ttx3HL3/4mV7gp1rOG5lEoRDrr\\nUAtZe18W/wQef+uby4DuZKYpyQKBgQDpiWx1r5Tfa+7HdGLW/mBAT8IFUNHtMmn0\\nBqkTmkUCeMYSDRmY11fK/EASE1AdFo+d+V/5a8EktjEFcUR+q4wvWMAyvMJ+EU09\\nx0HOENdS6AydKbeYg7G4GLLVEO6je9TdXtOuo74MasmDIHnms2gOWiRjGArB7bKg\\naN00og8/RQKBgCzzZxhR3Z5foO/jLFDJXYojckaTzu1iFcdwve5O5DAER1TjQPrM\\noEniPP111KOw4qPwEP88cZs6QXo+p7l29+NanZnJdG+qAYnq8+1qexrAJVLoldc9\\nLN46HRIWEMuXpnDVMlzgo6kgMwyalrxVvNMavXYVRmCQSCswDbF+fUkpAoGBAIbK\\nXKFoYCK8JytTz6CLXX6BClkLFr8y89h256t6xQ3yK1BL41RGJlPwWAKWxwyi8u2Y\\n+334ZZgM2Cpt/7ykwtqo/PXL4O3mipB3q1GGguFFMdKcO215xV+eUcmMZlBRrsC+\\ndKs9svlzwS8/1VwEfLCb8piHTd40lX7kR5iTWP2JAoGAdQYscMjQLGXkJgoPlym2\\noZd1cd8kBGGMxlaL3z0kOhTXJMnss/y2RN4MjUCXJH234TP9eaQsGpmxD25P0TzG\\n6i2v3eKdf3PDsOhmIh6UsX7uv/Sq1c8CnTRlTfSaV79YQWaW261PTdPSIHeSyeEL\\nhEpc1Iv9pPTLRnGQ4GkGfvU=\\n-----END PRIVATE KEY-----\\n\",\r\n  \"client_email\": \"guarddog-dev@guarddog-dev.iam.gserviceaccount.com\",\r\n  \"client_id\": \"105788050758665634843\",\r\n  \"auth_uri\": \"https://accounts.google.com/o/oauth2/auth\",\r\n  \"token_uri\": \"https://oauth2.googleapis.com/token\",\r\n  \"auth_provider_x509_cert_url\": \"https://www.googleapis.com/oauth2/v1/certs\",\r\n  \"client_x509_cert_url\": \"https://www.googleapis.com/robot/v1/metadata/x509/guarddog-dev%40guarddog-dev.iam.gserviceaccount.com\"\r\n}\r\n",
+        "serviceAccountKeyFileName" : "dev.json",
+        "messageAttributes" : {
+          "deviceId" : "${deviceId}",
+          "subFolder" : "${subFolder}"
+        }
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "c070c5b0-0158-11ee-9267-2773717c19a5"
+      },
+      "name" : "advanced",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.gcp.pubsub.TbPubSubNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 188,
+        "layoutY" : 472
+      },
+      "configuration" : {
+        "scriptLang" : "TBEL",
+        "jsScript" : "return {msg: msg, metadata: metadata, msgType: msgType};",
+        "tbelScript" : "\nreturn {msg: msg, metadata: msg.fido_metadata, msgType: msgType};"
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "a0105090-0407-11ee-9267-2773717c19a5"
+      },
+      "name" : "process_attr",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 598,
+        "layoutY" : 796
+      },
+      "configuration" : {
+        "projectId" : "guarddog-dev",
+        "topicName" : "test-topic-marco-001",
+        "serviceAccountKey" : "{\r\n  \"type\": \"service_account\",\r\n  \"project_id\": \"guarddog-dev\",\r\n  \"private_key_id\": \"d1f09755a4a5a46e796c799646145fcaee6c2f8b\",\r\n  \"private_key\": \"-----BEGIN PRIVATE KEY-----\\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDd8AqT0yPPvc7W\\nBULbPM4n4GUGKG7/38DZ7FT7UWRuOUTm4GbtJwmSuJBO1FHvaPtceaTHpng6h8OE\\nxbfKMQkEDbD3lvSFdgpSEmLfTKUpPZy+fU6ZsnsA6E5UChOwuaHOzktbA30GEb7x\\nf/EUNs1+v4bqAQPv2rWiE3bKpVBj0Au9mnn+cS2M/m9nOAthfp/i3sEUk29lQ/Nv\\nlHC5++c2ZjGWexguSOHCxmrezYVjgFwdYfE8+XIxIjxxvynEwxMhede/zD+oe1yg\\nFW9GhAoL82pczq6hfRJMIkPdYTg0jZZ6JA7pshG3rtHOZxbSTSI+ErnHEz48C/m4\\neQep2LotAgMBAAECggEAClvw8nNxgXnXlK/MLhWJfd0Aeiga/kCAbOuWD+D9shNk\\nPu6Mf1dKIBoTSkqoxGb/DJL0+QixJfI+Uw0zhfGB/TlyYCwgn7YhxzDqgoe+Uc15\\nan7I0228Rg+R0GRkBOS1Q8TnSYlBJa5gXj9djlb8goUIFBYWC/UGc1k7Ozw6I151\\nXC7U8SdXLi16sXdk1NJk28QpgxRmiYtUyCsnRpy7Zfayps9sbsh9yc2J3a41Verf\\nYEyYOBCE/Qc7Xe4LzWvDKn50AeB+v08UgDFvLrYAeLFBdgqJmZ+PQG5ARW6C8XLL\\n9Os+5zR4cetKW7ahdZI+HDFLhLi/dCo1JVxn/aFhYQKBgQDzSQB6+mVw5ldNp4G+\\nST2IJlEZOS0/Ff2Jnqb0MwurBZay3iZkyxs4OdGcD7BfKweQmay7FrPSKanL3kzU\\nfBXzlF5iHjHKT3l0hSUGtd5TqVJ+l5lVibzih1Ttx3HL3/4mV7gp1rOG5lEoRDrr\\nUAtZe18W/wQef+uby4DuZKYpyQKBgQDpiWx1r5Tfa+7HdGLW/mBAT8IFUNHtMmn0\\nBqkTmkUCeMYSDRmY11fK/EASE1AdFo+d+V/5a8EktjEFcUR+q4wvWMAyvMJ+EU09\\nx0HOENdS6AydKbeYg7G4GLLVEO6je9TdXtOuo74MasmDIHnms2gOWiRjGArB7bKg\\naN00og8/RQKBgCzzZxhR3Z5foO/jLFDJXYojckaTzu1iFcdwve5O5DAER1TjQPrM\\noEniPP111KOw4qPwEP88cZs6QXo+p7l29+NanZnJdG+qAYnq8+1qexrAJVLoldc9\\nLN46HRIWEMuXpnDVMlzgo6kgMwyalrxVvNMavXYVRmCQSCswDbF+fUkpAoGBAIbK\\nXKFoYCK8JytTz6CLXX6BClkLFr8y89h256t6xQ3yK1BL41RGJlPwWAKWxwyi8u2Y\\n+334ZZgM2Cpt/7ykwtqo/PXL4O3mipB3q1GGguFFMdKcO215xV+eUcmMZlBRrsC+\\ndKs9svlzwS8/1VwEfLCb8piHTd40lX7kR5iTWP2JAoGAdQYscMjQLGXkJgoPlym2\\noZd1cd8kBGGMxlaL3z0kOhTXJMnss/y2RN4MjUCXJH234TP9eaQsGpmxD25P0TzG\\n6i2v3eKdf3PDsOhmIh6UsX7uv/Sq1c8CnTRlTfSaV79YQWaW261PTdPSIHeSyeEL\\nhEpc1Iv9pPTLRnGQ4GkGfvU=\\n-----END PRIVATE KEY-----\\n\",\r\n  \"client_email\": \"guarddog-dev@guarddog-dev.iam.gserviceaccount.com\",\r\n  \"client_id\": \"105788050758665634843\",\r\n  \"auth_uri\": \"https://accounts.google.com/o/oauth2/auth\",\r\n  \"token_uri\": \"https://oauth2.googleapis.com/token\",\r\n  \"auth_provider_x509_cert_url\": \"https://www.googleapis.com/oauth2/v1/certs\",\r\n  \"client_x509_cert_url\": \"https://www.googleapis.com/robot/v1/metadata/x509/guarddog-dev%40guarddog-dev.iam.gserviceaccount.com\"\r\n}\r\n",
+        "serviceAccountKeyFileName" : "dev.json",
+        "messageAttributes" : {
+          "deviceId" : "${deviceId}",
+          "subFolder" : "${subFolder}"
+        }
+      },
+      "createdTime" : 0,
+      "debugMode" : true,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "303eb710-0408-11ee-9267-2773717c19a5"
+      },
+      "name" : "Marco PubSub",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.gcp.pubsub.TbPubSubNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 351,
+        "layoutY" : 596
+      },
+      "configuration" : {
+        "fromMetadata" : false,
+        "keys" : [ "fido_metadata" ]
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "59011d30-0464-11ee-9267-2773717c19a5"
+      },
+      "name" : "remove_metadata",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.transform.TbDeleteKeysNode"
+    }, {
+      "additionalInfo" : {
+        "description" : "",
+        "layoutX" : 540,
+        "layoutY" : 399
+      },
+      "configuration" : {
+        "defaultTTL" : 0,
+        "skipLatestPersistence" : false,
+        "useServerTs" : false
+      },
+      "createdTime" : 0,
+      "debugMode" : false,
+      "externalId" : null,
+      "id" : {
+        "entityType" : "RULE_NODE",
+        "id" : "77250630-1113-11ee-bbf3-2fe4009b93b6"
+      },
+      "name" : "testsave",
+      "ruleChainId" : null,
+      "singletonMode" : false,
+      "type" : "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode"
+    } ],
+    "ruleChainConnections" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}
